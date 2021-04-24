@@ -6,9 +6,9 @@ class Food{
     }
 
     static updateFoodStock(count){
-        if(keyDown(UP_ARROW)){
-            foodStock -= 1
-            database.ref(foodStockRef).update({foodStock: count});
+        if(count <= 0){
+            count = count - 1
+            database.ref("/").update({foodStock: count});
         }
     }
 }
