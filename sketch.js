@@ -19,7 +19,7 @@ function setup() {
 function draw() {  
 
   Food.getFoodStock();
-  if(keyDown = SPACE){
+  if(keyDown(SPACE)){
     Food.updateFoodStock();
   }  
   drawSprites();
