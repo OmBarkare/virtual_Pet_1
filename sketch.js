@@ -11,13 +11,14 @@ function setup() {
 	createCanvas(800, 700);
   database = firebase.database();
 
- foodStockRef = database.ref("Food");
+  foodStockRef = database.ref("Food");
 
 }
 
 
 function draw() {  
 
+  Food.getFoodStock();
   Food.updateFoodStock();
 
   drawSprites();

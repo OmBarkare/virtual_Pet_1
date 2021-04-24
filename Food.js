@@ -1,11 +1,11 @@
 class Food{
     constructor(){}
 
-    getFoodStock(){
+    static getFoodStock(){
         foodStockRef.on("value",function(data){foodStock = data.val();})
     }
 
-    updateFoodStock(count){
+    static updateFoodStock(count){
         database.ref(foodStockRef).update({foodStock: count});
     }
 }
