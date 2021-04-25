@@ -8,7 +8,7 @@ class Food{
     static updateFoodStock(count){
         if(count <= 0){
             count = count - 1
-            database.ref("/").update({foodStock: count});
+            database.ref("/").update({Food: count});
         }
     }
 }
