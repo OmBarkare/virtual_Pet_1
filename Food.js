@@ -6,8 +6,8 @@ class Food{
     }
 
     update(){
-        database.ref("Food").update({
-          Food.value: 8
+        database.ref("/").update({
+          Food: 9
         });
       }
     }
