@@ -1,7 +1,8 @@
-var database;
+var database = firebase.database();
 var foodStock;
 var food, foodStockRef, foodClass;
 var test, testRef;
+var foodCount;
 
 function preload()
 {
@@ -10,9 +11,8 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
-  foodClass = new Food();
-  database = firebase.database();
-  foodStockRef = database.ref("Food");
+  foodObject = new Food();
+  foodCount = 10;
 // testFunction();
 }
 
@@ -21,14 +21,11 @@ function draw() {
 
   background(0);
 
-  foodClass.getFoodStock();
-
-  if(keyDown("space")){
-    foodClass.update();
-  }  
+  foodObject.getFoodStock();
 
   text("food: "+foodStock, 200, 200);
-//  text("test"+test,100,100);
+  //text("test"+test,100,100);
+  Form.display();
 }
 
 /*async function testFunction(){
@@ -36,4 +33,8 @@ function draw() {
   await testRef.on("value",function(data){test = data.val();});
 }*/
 
-
+function keyPressed(){
+  if(keyDown("space")){
+    foodObject.update(foodCount);
+  }  
+}

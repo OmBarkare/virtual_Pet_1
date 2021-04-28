@@ -1,6 +1,7 @@
 class Form{
     constructor(){}
-    display(){
+    
+    static display(){
         var title = createElement("h2");
         title.html("Virtual Pet");
         title.position(350,10);
