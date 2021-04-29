@@ -12,7 +12,6 @@ function preload()
 function setup() {
 	createCanvas(800, 700);
   foodObject = new Food();
-  foodCount = 10;
 // testFunction();
 }
 
@@ -24,9 +23,11 @@ function draw() {
   foodObject.getFoodStock();
 
   text("food: "+foodStock, 200, 200);
-  //text("test"+test,100,100);
-  Form.display();
-  text("press spae to feed the dog",400,100);
+
+//text("test"+test,100,100);
+//Form.display();
+
+  text("press space to feed the dog",400,100);
 }
 
 /*async function testFunction(){
@@ -35,7 +36,7 @@ function draw() {
 }*/
 
 function keyPressed(){
-  if(keyDown===32){
+  if(keyCode===32){
     foodObject.update(foodStock);
   }  
 }

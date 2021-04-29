@@ -1,9 +1,9 @@
 class Food{
   constructor(){}
 
-  async getFoodStock(){
-    foodStockRef = database.ref("Food");
-    await foodStockRef.on("value",function(data){foodStock = data.val();})
+  getFoodStock(){
+     foodStockRef = database.ref("Food");
+     foodStockRef.on("value",function(data){foodStock = data.val();})
   }
 
   update(count){
@@ -12,6 +12,8 @@ class Food{
 
     if(count > 0)
       count -= 1  
+
+console.log(count);
 
     database.ref("/").update({
       Food: count
