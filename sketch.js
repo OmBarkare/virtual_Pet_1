@@ -17,16 +17,11 @@ function setup() {
 
 
 function draw() {  
-
   background(0);
-
   foodObject.getFoodStock();
-
   text("food: "+foodStock, 200, 200);
-
 //text("test"+test,100,100);
 //Form.display();
-
   text("press space to feed the dog",400,100);
 }
 
