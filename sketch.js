@@ -26,6 +26,7 @@ function draw() {
   text("food: "+foodStock, 200, 200);
   //text("test"+test,100,100);
   Form.display();
+  text("press spae to feed the dog",400,100);
 }
 
 /*async function testFunction(){
@@ -34,7 +35,7 @@ function draw() {
 }*/
 
 function keyPressed(){
-  if(keyDown("space")){
-    foodObject.update(foodCount);
+  if(keyDown===32){
+    foodObject.update(foodStock);
   }  
 }
