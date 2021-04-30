@@ -23,6 +23,7 @@ function draw() {
   background(0);
 
   foodObject.getFoodStock();
+  textSize(15)
   text("food: "+foodStock, 200, 200);
 
   if(dogMood === "hungry"){
@@ -31,7 +32,8 @@ function draw() {
 
   dog.scale = 0.3;
 
-  text("press space to feed the dog",350,100);
+  textSize(20)
+  text("press space to feed the dog",300,100);
 
   drawSprites();
 }
