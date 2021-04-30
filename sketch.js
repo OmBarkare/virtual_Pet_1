@@ -13,6 +13,7 @@ function preload(){
 function setup() {
 	createCanvas(800, 700);
   foodObject = new Food();
+  dog = createSprite(500,350,50,50);
   dogMood = "hungry";
 // testFunction();
 }
@@ -24,15 +25,13 @@ function draw() {
   foodObject.getFoodStock();
   text("food: "+foodStock, 200, 200);
 
-  dog = createSprite(500,350,50,50);
-
   if(dogMood === "hungry"){
     dog.addImage(dogImg);
   }
 
   dog.scale = 0.3;
 
-  text("press space to feed the dog",400,100);
+  text("press space to feed the dog",350,100);
 
   drawSprites();
 }
@@ -41,6 +40,6 @@ function keyPressed(){
   if(keyCode===32){
     foodObject.update(foodStock);
     dogMood = "happy";
-    dog.addImage("happy",happyDogImg);
+    dog.addImage(happyDogImg);
   }  
 }
